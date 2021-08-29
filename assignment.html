@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #393E46;
+        }
+
+        form {
+            border-radius: 25px;
+        }
+
+        .kalkulator {
+            position: relative;
+            display: grid;
+        }
+
+        .kalkulator .value {
+            grid-column: span 4;
+            height: 100px;
+            text-align: right;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 18px;
+            background: #F0F5F9;
+        }
+
+        .kalkulator span {
+            display: grid;
+            width: 60px;
+            height: 60px;
+            color: #fff;
+            background: #222831;
+            place-items: center;
+            border: 1px solid rgba(0, 0, 0, .1);
+            transition: 0s;
+        }
+
+        .kalkulator span:hover {
+            transform: scale();
+        }
+
+        .kalkulator span:active {
+            background: #50CB93;
+            color: #111;
+        }
+
+        .kalkulator span.clear {
+            grid-column: span 2;
+            width: 122px;
+            background: #222831;
+            color: #50CB93;
+        }
+        
+        .kalkulator span.kosong {
+            grid-column: span 2;
+            width: 122px;
+            background: #222831;
+        }
+
+        .kalkulator .angka:active {
+            background: #50CB93;
+            color: #111;
+        }
+
+        .kalkulator span.tambah {
+            grid-row: span 2;
+            height: 122px;
+        }
+
+        .kalkulator span.samadengan {
+            background: #222831;
+            color: #50CB93;
+        }
+
+        .kalkulator span.bagi {
+            background: #222831;
+            color: #50CB93;
+        }
+        
+        .kalkulator span.kurang {
+            background: #222831;
+            color: #50CB93;
+        }
+
+        .kalkulator span.tambah {
+            background: #222831;
+            color: #50CB93;
+        }
+
+        .kalkulator span.kali {
+            background: #222831;
+            color: #50CB93;
+        }
+    </style>
+</head>
+<script>
+
+</script>
+
+<body>
+    <form class="kalkulator" name="kalkulator">
+        <input class="value" type="text" name="txt" readonly="">
+        <span class="angka clear" onclick="document.kalkulator.txt.value =''">c</span>
+        <span class="angka bagi" onclick="document.kalkulator.txt.value +='/'">/</span>
+        <span class="angka kali" onclick="document.kalkulator.txt.value +='*'">*</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='7'">7</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='8'">8</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='9'">9</span>
+        <span class="angka kurang" onclick="document.kalkulator.txt.value +='-'">-</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='4'">4</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='5'">5</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='6'">6</span>
+        <span class="angka tambah" onclick="document.kalkulator.txt.value +='+'">+</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='3'">3</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='2'">2</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='1'">1</span>
+        <span class="angka kosong" onclick="document.kalkulator.txt.value +='0'">0</span>
+        <span class="angka" onclick="document.kalkulator.txt.value +='.'">.</span>
+        <span class="angka samadengan" onclick="document.kalkulator.txt.value = eval(kalkulator.txt.value)">=</span>
+    </form>
+</body>
+
+</html>
